@@ -5,6 +5,7 @@ services:
       - "8000:8000"
     environment:
       - DDGS_PROXY
+      - DDGS_WORKERS=${DDGS_WORKERS:-4}
     volumes:
       - ./logs:/app/logs
     restart: unless-stopped
