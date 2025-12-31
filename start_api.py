@@ -14,7 +14,7 @@ sys.path.insert(0, ".")
 
 if __name__ == "__main__":
     # Get number of workers from environment variable, default to 4 for better concurrency
-    workers = int(os.environ.get("DDGS_WORKERS", "4"))
+    workers = int(os.environ.get("DDGS_WORKERS", "1"))
 
     logger.info("🚀 Starting DDGS API server on http://0.0.0.0:8000 with %d workers", workers)
     # Use import string format to support multiple workers
